@@ -85,6 +85,10 @@ section {
     border-radius: 0;
     border: none;
     padding: 0;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
 }
 .blog-details .thumbnail .caption h3 {
     margin-top: 0;
@@ -95,7 +99,6 @@ section {
 .blog-details .thumbnail .caption article {
     margin: 50px 0;
 }
-
 .right-sidebar {
     padding: 0 0 0 25px;
 }
@@ -106,6 +109,37 @@ section {
 }
 .right-sidebar .caption h3 {
     margin-top: 0;
+}
+.thumbnail-header {
+    position: relative;
+    display: block;
+}
+.thumbnail-header img {
+    width: 100%;
+}
+.thumbnail-header .image-overlay {
+    background: rgba(1,1,1,0.3);
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    color: #ffffff;
+    display: none;
+}
+.thumbnail:hover .thumbnail-header .image-overlay {
+    display: block;
+}
+.thumbnail-header .image-overlay::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    transform: rotate(-45deg);
 }
 
 /*sidenav stylesheet*/
