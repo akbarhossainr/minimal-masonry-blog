@@ -23,6 +23,25 @@
     <![endif]-->
 </head>
 <body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="profile">
+        <div class="card">
+            <div class="card-header">
+                <img src="images/avatar.jpg" alt="Profile photo" class="img-responsive img-circle" width="100">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">John Doe</h3>
+                <p>Software Designer, <a href="">XXX Corporation</a></p>
+                <article class="bio">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis earum ipsum iste iure iusto magnam repudiandae ullam velit voluptatem.</p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
 <header id="bc-navbar">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -44,6 +63,7 @@
                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="#" onclick="openNav()"><i class="fa fa-bars"></i></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -141,14 +161,8 @@
 <script src="js/bootstrap.min.js"></script>
 <!--masonry script-->
 <script src="plugins/masonry/jquery.masonry.min.js"></script>
+<!--init scripts-->
+<script src="js/init.js"></script>
 
-<script>
-    $(function(){
-        $('#masonry-grid').masonry({
-            // options
-            itemSelector : '.item'
-        });
-    });
-</script>
 </body>
 </html>
