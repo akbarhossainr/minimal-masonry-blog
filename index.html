@@ -23,6 +23,15 @@
     <![endif]-->
 </head>
 <body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
     <header id="bc-navbar">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -44,6 +53,7 @@
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#" onclick="openNav()"><i class="fa fa-bars"></i></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -192,6 +202,18 @@
             itemSelector : '.item'
         });
     });
+</script>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        /*document.getElementById("wrapper").style.marginRight = "250px";*/
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        /*document.getElementById("wrapper").style.marginRight= "0";*/
+    }
 </script>
 </body>
 </html>
